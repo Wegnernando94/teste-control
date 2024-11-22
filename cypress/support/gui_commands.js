@@ -1,21 +1,21 @@
 Cypress.Commands.add('login', (
-  user = Cypress.env('user'), // Obtém o valor configurado no cypress.config.js
-  password = Cypress.env('password') // Obtém o valor configurado no cypress.config.js
+  user = Cypress.env('user'), 
+  password = Cypress.env('password') 
 ) => {
-  cy.visit('/app'); // Usa o `baseUrl` configurado no cypress.config.js
+  cy.visit('/app'); 
 
-  // Preenche o campo de e-mail
+  
   cy.get('#floatingInput')
     .should('be.visible')
-    .clear() // Limpa o campo para garantir que não há valores residuais
-    .type(user); // Preenche com o valor de `user`
+    .clear() 
+    .type(user); 
 
   // Preenche o campo de senha
   cy.get('#floatingPassword')
     .should('be.visible')
     .clear()
-    .type(password, { log: false }); // Preenche com o valor de `password`
+    .type(password, { log: false }); 
 
-  // Clica no botão de login
+    //botão confirmar
   cy.get('button.btn-primary').click();
 });
