@@ -1,6 +1,6 @@
 # Teste prime control
 
-Realizado os devidos desafios em cypress somente realizados testes visuais
+#Realizado os devidos desafios em cypress somente realizados testes visuais
 
 CT001 – Criar uma nova Conta com sucesso
 CT002 – Validar criação de uma conta com Email já cadastrado
